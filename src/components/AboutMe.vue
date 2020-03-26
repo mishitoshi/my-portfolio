@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <h2 class="sectionTitle">{{ title }}</h2>
+    <Title :title="title" />
     <v-simple-table light>
       <tbody>
         <tr v-for="(item, i) in items" :key="i">
@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import Title from "./Title";
 export default {
   name: "aboutMe",
+  components: {
+    Title
+  },
   data: () => ({
     title: "about me",
     items: [
@@ -25,17 +29,10 @@ export default {
       {
         title: "university",
         content: "明治大学 商学部"
-      },
-
+      }
     ]
   })
 };
 </script>
 
-<style scoped lang="scss">
-.sectionTitle {
-  font-size: 48px;
-  text-align: center;
-  font-weight: 500;
-}
-</style>
+<style scoped lang="scss"></style>
