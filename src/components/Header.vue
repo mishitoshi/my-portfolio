@@ -2,7 +2,7 @@
   <header>
     <v-navigation-drawer app v-model="drawer">
       <v-list :two-line="twoLine">
-        <v-subheader>Sitemap</v-subheader>
+        <v-subheader v-html="subHeader"></v-subheader>
         <v-list-item-group color="primary" v-model="item">
           <v-list-item v-for="(item, i) in items" :key="i">
             <v-list-item-content>
@@ -26,6 +26,7 @@ export default {
     drawer: null,
     twoLine: true,
     item: 4,
+    subHeader: "sitemap",
     items: [
       {
         title: "Profile",
