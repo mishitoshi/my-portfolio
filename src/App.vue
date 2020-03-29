@@ -4,25 +4,25 @@
     <v-content>
       <AboutMe />
       <Carriers />
-      <HelloWorld />
+      <Skill />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Carriers from "./components/Carriers";
+import Skill from "./components/Skill";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld,
     Header,
     AboutMe,
-    Carriers
+    Carriers,
+    Skill
   },
 
   data: () => ({
