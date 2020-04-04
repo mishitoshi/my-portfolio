@@ -13,7 +13,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app color="amber lighten-4" dark hide-on-scroll>
+    <v-app-bar app color="white" hide-on-scroll>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
   </header>
