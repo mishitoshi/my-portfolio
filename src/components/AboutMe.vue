@@ -1,15 +1,14 @@
 <template>
-  <v-container fluid>
+  <section class="section-wrapper">
     <Title :title="title" />
-    <v-simple-table light>
-      <tbody>
-        <tr v-for="(item, i) in items" :key="i">
-          <td>{{ item.title }}</td>
-          <td>{{ item.content }}</td>
-        </tr>
-      </tbody>
-    </v-simple-table>
-  </v-container>
+    <div class="aboutMe-wrapper">
+      <v-avatar size="150">
+        <img :src="profile.image.path" :alt="profile.image.alt" />
+      </v-avatar>
+      <h2>{{ profile.name }}</h2>
+      <p>{{ profile.content }}</p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -21,18 +20,33 @@ export default {
   },
   data: () => ({
     title: "about me",
-    items: [
-      {
-        title: "name",
-        content: "利光 正太"
+    profile: {
+      image: {
+        path: require("@/assets/images/avatar.jpg"),
+        alt: "プロフィール画像"
       },
-      {
-        title: "university",
-        content: "明治大学 商学部"
-      }
-    ]
+      name: "利光 正太",
+      content:
+        "明治大学４年生です。商学部でマーケティングを先行しています。現在は株式会社Journeyでサーバーサイドエンジニアをしています。現在制作中のため内容を徐々に充実させていきます"
+    }
   })
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.section-wrapper {
+  @include flex-column;
+  margin-bottom: 32px;
+  padding: 0 15vw;
+}
+.aboutMe-wrapper {
+  @include flex-column;
+  width: 80%;
+  @include sp {
+    width: 90%;
+  }
+  h2 {
+    padding: 10px 0;
+  }
+}
+</style>
