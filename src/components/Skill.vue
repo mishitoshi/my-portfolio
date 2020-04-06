@@ -1,26 +1,15 @@
 <template>
-  <div>
+  <div class="skill-wrapper">
     <Title :title="title" />
-    <v-container>
-      <SubTitle :sub-title="subTitle1" />
-      <v-row>
-        <v-col v-for="(skill, i) in skills1" :key="i" cols="6" md="3">
-          {{ skill }}
-        </v-col>
-      </v-row>
-      <SubTitle :sub-title="subTitle2" />
-      <v-row>
-        <v-col v-for="(skill, i) in skills2" :key="i" cols="6" md="3">
-          {{ skill }}
-        </v-col>
-      </v-row>
-      <SubTitle :sub-title="subTitle3" />
-      <v-row>
-        <v-col v-for="(skill, i) in skills3" :key="i" cols="6" md="3">
-          {{ skill }}
-        </v-col>
-      </v-row>
-    </v-container>
+    <div class="skill" v-for="(skill, i) in skills" :key="i">
+      <SubTitle :sub-title="skill.subtitle" />
+      <div class="skill-items">
+        <span v-for="(content, i) in skill.content" :key="i" class="item">
+          #{{ content }}
+        </span>
+        <span class="item">etc...</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,14 +26,67 @@ export default {
   data: () => ({
     title: "Skills",
     // TODO: とりあえず形だけ実装、要命名
-    subTitle1: "実務経験あり",
-    subTitle2: "実務経験なし",
-    subTitle3: "興味がある",
-    skills1: ["Ruby", "JavaScript", "GitHub", "StackDriver"],
-    skills2: ["Ruby", "JavaScript", "GitHub", "StackDriver"],
-    skills3: ["Ruby", "JavaScript", "GitHub", "StackDriver"]
+    skills: [
+      {
+        subtitle: "実務経験あり",
+        content: [
+          "HTML",
+          "CSS",
+          "Ruby",
+          "RubyonRails",
+          "slim",
+          "JavaScript",
+          "jQuery",
+          "GitHub",
+          "GitHubFlow",
+          "Slack",
+          "MySQL",
+          "GCP(StackDriber etc..)",
+          "AWS(EC2, Route53)",
+        ]
+      },
+      {
+        subtitle: "実務経験なし",
+        content: [
+          "CircleCI",
+          "Docker",
+          "Vue.js",
+          "AWS(ECS, ECR, RDS, S3 etc..)",
+          "React"
+        ]
+      },
+      {
+        subtitle: "興味がある",
+        content: [
+          "Golang",
+          "Nuxt.js"
+        ]
+      }
+    ]
   })
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.skill-wrapper {
+  @include section;
+  .skill {
+    @include flex-column;
+    align-items: start;
+    width: 80%;
+    @include sp {
+      width: 90%;
+    }
+    h3 {
+      padding: 10px 0;
+    }
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        padding: 8px;
+      }
+    }
+  }
+}
+</style>
