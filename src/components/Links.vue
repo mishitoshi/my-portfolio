@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="link-wrapper">
     <Title :title="title" />
-    <v-container>
-      <v-row>
-        <v-col v-for="(link, i) in links" cols="12" :key="i">
-          <a :href="link.url">{{ link.name }}</a>
-        </v-col>
-      </v-row>
-    </v-container>
+    <ul class="link-items">
+      <li v-for="(link, i) in links" :key="i" class="item">
+        <a :href="link.url"
+          ><img :src="link.image_url" alt="" /><span>{{ link.name }}</span></a
+        >
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -23,27 +23,75 @@ export default {
     links: [
       {
         name: "GitHub",
-        url: "https://github.com/mishitoshi"
+        url: "https://github.com/mishitoshi",
+        image_url: require("@/assets/images/logo_github.png")
       },
       {
         name: "Qiita",
-        url: "https://qiita.com/mishikunxo"
+        url: "https://qiita.com/mishikunxo",
+        image_url: require("@/assets/images/logo_qiita.png")
       },
       {
         name: "Twitter",
-        url: "https://twitter.com/mishikunxo"
+        url: "https://twitter.com/mishikunxo",
+        image_url: require("@/assets/images/logo_twitter.svg")
       },
       {
         name: "Wantedly",
-        url: "https://www.wantedly.com/users/101757829"
+        url: "https://www.wantedly.com/users/101757829",
+        image_url: require("@/assets/images/logo_wantedly.svg")
       },
       {
         name: "Facebook",
-        url: "https://www.facebook.com/toshimishito"
+        url: "https://www.facebook.com/toshimishito",
+        image_url: require("@/assets/images/logo_facebook.png")
       }
     ]
   })
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.link-wrapper {
+  @include section;
+  background-color: #ebf0f4;
+}
+.link-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  padding: 0;
+
+  @include sp {
+    width: 90%;
+    @include flex-column;
+  }
+  li.item {
+    display: flex;
+    color: black;
+    padding: 8px 20px;
+    width: 45%;
+    margin: 8px 0;
+    background-color: white;
+    box-shadow: 0 0 8px gray;
+    @include sp {
+      width: 100%;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      color: $black;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 24px;
+        height: auto;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+</style>
