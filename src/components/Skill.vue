@@ -42,7 +42,7 @@ export default {
           "Slack",
           "MySQL",
           "GCP(StackDriber etc..)",
-          "AWS(EC2, Route53)",
+          "AWS(EC2, Route53)"
         ]
       },
       {
@@ -57,10 +57,7 @@ export default {
       },
       {
         subtitle: "興味がある",
-        content: [
-          "Golang",
-          "Nuxt.js"
-        ]
+        content: ["Golang", "Nuxt.js"]
       }
     ]
   })
@@ -83,6 +80,7 @@ export default {
     .skill-items {
       display: flex;
       flex-wrap: wrap;
+      font-size: 16px;
       .item {
         padding: 8px;
       }
