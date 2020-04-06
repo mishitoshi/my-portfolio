@@ -1,5 +1,7 @@
 <template>
-  <h2 class="section-title">{{ title }}</h2>
+  <h2 class="section-title" :class="{ 'title-margin': isMargin }">
+    {{ title }}
+  </h2>
 </template>
 
 <script>
@@ -9,6 +11,10 @@ export default {
     title: {
       type: String,
       default: ""
+    },
+    isMargin: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -19,8 +25,12 @@ export default {
   text-align: center;
   font-size: 48px;
   font-weight: normal;
-  border-bottom: double 4px #6DD3F7;
-  margin-bottom: 32px;
-  width: 0 auto;
+  border-bottom: double 4px #6dd3f7;
+  margin: 32px 0;
+  width: auto;
+}
+
+.title-margin {
+  margin-left: 10vw;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <section class="section-wrapper">
+  <section class="aboutme-wrapper">
     <Title :title="title" />
-    <div class="aboutMe-wrapper">
+    <div class="aboutme">
       <v-avatar size="150">
         <img :src="profile.image.path" :alt="profile.image.alt" />
       </v-avatar>
@@ -34,12 +34,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.section-wrapper {
-  @include flex-column;
-  margin-bottom: 32px;
-  padding: 0 15vw;
+.aboutme-wrapper {
+  @include section;
 }
-.aboutMe-wrapper {
+.aboutme {
   @include flex-column;
   width: 80%;
   @include sp {
