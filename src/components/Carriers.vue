@@ -1,5 +1,5 @@
 <template>
-  <div class="carrier-wrapper">
+  <div class="carrier-wrapper" id="carrier">
     <Title :title="title" :is-margin="isMargin" />
     <v-timeline class="carrier" :dense="dense">
       <v-timeline-item

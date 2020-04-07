@@ -1,5 +1,5 @@
 <template>
-  <div class="link-wrapper">
+  <div class="link-wrapper" id="link">
     <Title :title="title" />
     <ul class="link-items">
       <li v-for="(link, i) in links" :key="i" class="item">
