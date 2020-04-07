@@ -24,27 +24,27 @@ export default {
       {
         name: "GitHub",
         url: "https://github.com/mishitoshi",
-        image_url: require("@/assets/images/logo_github.png")
+        image_url: "https://cdn.mishitoshi.com/images/logo_github.png"
       },
       {
         name: "Qiita",
         url: "https://qiita.com/mishikunxo",
-        image_url: require("@/assets/images/logo_qiita.png")
+        image_url: "https://cdn.mishitoshi.com/images/logo_qiita.png"
       },
       {
         name: "Twitter",
         url: "https://twitter.com/mishikunxo",
-        image_url: require("@/assets/images/logo_twitter.svg")
+        image_url: "https://cdn.mishitoshi.com/images/logo_twitter.svg"
       },
       {
         name: "Wantedly",
         url: "https://www.wantedly.com/users/101757829",
-        image_url: require("@/assets/images/logo_wantedly.svg")
+        image_url: "https://cdn.mishitoshi.com/images/logo_wantedly.svg"
       },
       {
         name: "Facebook",
         url: "https://www.facebook.com/toshimishito",
-        image_url: require("@/assets/images/logo_facebook.png")
+        image_url: "https://cdn.mishitoshi.com/images/logo_facebook.png"
       }
     ]
   })

@@ -3,7 +3,7 @@
     <Title :title="title" />
     <div class="aboutme">
       <v-avatar size="150">
-        <img :src="profile.image.path" :alt="profile.image.alt" />
+        <img :src="profile.image.url" :alt="profile.image.alt" />
       </v-avatar>
       <h2>{{ profile.name }}</h2>
       <p>{{ profile.content }}</p>
@@ -19,10 +19,10 @@ export default {
     Title
   },
   data: () => ({
-    title: "about me",
+    title: "About me",
     profile: {
       image: {
-        path: require("@/assets/images/avatar.jpg"),
+        url: "https://cdn.mishitoshi.com/images/avatar.jpg",
         alt: "プロフィール画像"
       },
       name: "利光 正太",

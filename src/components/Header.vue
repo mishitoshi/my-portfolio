@@ -7,10 +7,7 @@
           <v-list-item v-for="(item, i) in items" :key="i" :href="item.id">
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
-              <v-list-item-subtitle>{{
-                item.content
-              }}</v-list-item-subtitle></v-list-item-content
-            >
+            </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -32,15 +29,13 @@ export default {
     items: [
       {
         id: "#about-me",
-        title: "About Me",
-        content: "プロフィールです。"
+        title: "About Me"
       },
-      { id: "#skill", title: "skills", content: "使用可能なスキルです。" },
-      { id: "#carrier", title: "carriers", content: "今までの経歴です。" },
+      { id: "#history", title: "History" },
+      { id: "#skill", title: "Skills" },
       {
         id: "#link",
-        title: "link",
-        content: "私に関わるリンクです。"
+        title: "Links"
       }
     ]
   })
