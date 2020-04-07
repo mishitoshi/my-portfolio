@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-wrapper">
+  <div class="skill-wrapper" id="skill">
     <Title :title="title" />
     <div class="skill" v-for="(skill, i) in skills" :key="i">
       <SubTitle :sub-title="skill.subtitle" />

@@ -1,5 +1,5 @@
 <template>
-  <section class="aboutme-wrapper">
+  <section class="aboutme-wrapper" id="about-me">
     <Title :title="title" />
     <div class="aboutme">
       <v-avatar size="150">
