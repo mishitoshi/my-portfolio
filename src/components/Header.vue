@@ -36,7 +36,7 @@ export default {
         content: "プロフィールです。"
       },
       { id: "#skill", title: "skills", content: "使用可能なスキルです。" },
-      { id: "#carrier", title: "carriers", content: "今までの経歴です。" },
+      { id: "#history", title: "Histories", content: "今までの経歴です。" },
       {
         id: "#link",
         title: "link",

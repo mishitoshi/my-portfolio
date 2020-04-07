@@ -19,7 +19,7 @@ export default {
     Title
   },
   data: () => ({
-    title: "about me",
+    title: "About me",
     profile: {
       image: {
         url: "https://cdn.mishitoshi.com/images/avatar.jpg",

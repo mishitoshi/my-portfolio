@@ -3,7 +3,7 @@
     <Header />
     <v-content>
       <AboutMe />
-      <Carriers />
+      <History />
       <Skill />
       <Links />
     </v-content>
@@ -13,7 +13,7 @@
 <script>
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
-import Carriers from "./components/Carriers";
+import History from "./components/History";
 import Skill from "./components/Skill";
 import Links from "./components/Links";
 
@@ -23,7 +23,7 @@ export default {
   components: {
     Header,
     AboutMe,
-    Carriers,
+    History,
     Skill,
     Links
   },

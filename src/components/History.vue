@@ -1,22 +1,22 @@
 <template>
-  <div class="carrier-wrapper" id="carrier">
+  <div class="history-wrapper" id="history">
     <Title :title="title" :is-margin="isMargin" />
-    <v-timeline class="carrier" :dense="dense">
+    <v-timeline class="history" :dense="dense">
       <v-timeline-item
-        v-for="(carrier, i) in carriers"
+        v-for="(history, i) in histories"
         :key="i"
         small
         :color="color"
       >
         <template v-slot:opposite>
-          <span>{{ carrier.year }}</span>
+          <span>{{ history.year }}</span>
         </template>
         <v-card raised>
-          <v-card-title class="headline">{{ carrier.title }}</v-card-title>
+          <v-card-title class="headline">{{ history.title }}</v-card-title>
           <v-card-subtitle v-show="toggleSubtitle">{{
-            carrier.year
+            history.year
           }}</v-card-subtitle>
-          <v-card-text>{{ carrier.text }}</v-card-text>
+          <v-card-text>{{ history.text }}</v-card-text>
         </v-card>
       </v-timeline-item>
     </v-timeline>
@@ -27,14 +27,14 @@
 import Title from "./Title";
 
 export default {
-  name: "Carriers",
+  name: "History",
   components: {
     Title
   },
   data: () => ({
-    title: "Carriers",
+    title: "History",
     width: window.innerWidth,
-    carriers: [
+    histories: [
       {
         year: "2016/04",
         title: "明治大学入学",
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.carrier-wrapper {
+.history-wrapper {
   @include section;
   background-color: #ebf0f4;
   @include sp {
@@ -89,7 +89,7 @@ export default {
   }
 }
 
-.carrier {
+.history {
   width: 100%;
 }
 </style>
