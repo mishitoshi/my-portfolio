@@ -18,7 +18,7 @@ import Title from "./Title";
 import SubTitle from "./SubTitle";
 
 export default {
-  name: "Skill",
+  name: "Skills",
   components: {
     Title,
     SubTitle
@@ -34,13 +34,13 @@ export default {
           "CSS",
           "Ruby",
           "RubyonRails",
-          "slim",
           "JavaScript",
           "jQuery",
           "GitHub",
           "GitHubFlow",
           "Slack",
           "MySQL",
+          "Redis",
           "GCP(StackDriber etc..)",
           "AWS(EC2, Route53)"
         ]
@@ -57,7 +57,7 @@ export default {
       },
       {
         subtitle: "興味がある",
-        content: ["Golang", "Nuxt.js"]
+        content: ["Go", "Nuxt.js"]
       }
     ]
   })
