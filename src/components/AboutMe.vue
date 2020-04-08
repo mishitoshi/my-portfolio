@@ -1,12 +1,15 @@
 <template>
-  <section class="aboutme-wrapper" id="about-me">
+  <section class="aboutMe-wrapper" id="about-me">
     <Title :title="title" />
-    <div class="aboutme">
+    <div class="aboutMe">
       <v-avatar size="150">
         <img :src="profile.image.url" :alt="profile.image.alt" />
       </v-avatar>
       <h2>{{ profile.name }}</h2>
-      <p>{{ profile.content }}</p>
+      <div>
+        <p>{{ profile.text }}</p>
+        <p>{{ profile.hobby }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -25,19 +28,20 @@ export default {
         url: "https://cdn.mishitoshi.com/images/avatar.jpg",
         alt: "プロフィール画像"
       },
-      name: "利光 正太",
-      content:
-        "明治大学４年生です。商学部でマーケティングを先行しています。現在は株式会社Journeyでサーバーサイドエンジニアをしています。現在制作中のため内容を徐々に充実させていきます"
+      name: "利光 正太(23)",
+      text:
+        "はじめまして！利光正太です。明治大学商学部の4年生で現在休学中です。2019年の2月にプログラミングに出会い、2019年の9月から株式会社Journeyでwebエンジニアをしています。Rubyが得意です。",
+      hobby: "趣味：DAZNでサッカー観戦(プレミア・リーガ)・旅行・料理"
     }
   })
 };
 </script>
 
 <style scoped lang="scss">
-.aboutme-wrapper {
+.aboutMe-wrapper {
   @include section;
 }
-.aboutme {
+.aboutMe {
   @include flex-column;
   width: 80%;
   @include sp {
@@ -45,6 +49,10 @@ export default {
   }
   h2 {
     padding: 10px 0;
+  }
+  p {
+    font-size: 0.9rem;
+    color: $light-black;
   }
 }
 </style>

@@ -5,15 +5,16 @@
       <v-timeline-item
         v-for="(history, i) in histories"
         :key="i"
-        small
         :color="color"
       >
         <template v-slot:opposite>
           <span>{{ history.year }}</span>
         </template>
         <v-card raised>
-          <v-card-title class="headline">{{ history.title }}</v-card-title>
-          <v-card-subtitle v-show="toggleSubtitle">{{
+          <v-card-title class="title font-weight-bold">{{
+            history.title
+          }}</v-card-title>
+          <v-card-subtitle v-show="toggleYear">{{
             history.year
           }}</v-card-subtitle>
           <v-card-text>{{ history.text }}</v-card-text>
@@ -34,26 +35,35 @@ export default {
   data: () => ({
     title: "History",
     width: window.innerWidth,
+    color: "#309fff",
     histories: [
       {
         year: "2016/04",
         title: "明治大学入学",
-        text: "明治大学に入学しました。"
+        text:
+          "入学してからはやりたいことが見つからず、バイトに明け暮れていました。"
       },
       {
         year: "2018/08",
-        title: "レイアウト確認",
+        title: "総合職のインターンに参加",
         text:
-          "レイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウト"
+          "この頃に就活を始め、野村証券、三菱UFJモルガン・スタンレー証券のインターンシップに参加しました。"
       },
       {
         year: "2019/02",
-        title: "レイアウト確認",
+        title: "プログラミングに出会う",
         text:
-          "レイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウトレイアウト"
+          "Amazon Primeでシリコンバレーというドラマを見てエンジニアに憧れ、プログラミングを始めました。" +
+          "そこからプログラミングにはまり、総合職での就活をやめてエンジニアを目指すことにしました。"
+      },
+      {
+        year: "2019/09~現在",
+        title: "株式会社Journey",
+        text:
+          "ミニッツ(https://minute.jp/)というサービスの新規機能開発、外部サービスとの連携、保守など幅広くの業務に携わっています。" +
+          "サーバーサイドはRuby, フロントエンドはJavaScriptやjQueryを書いています。"
       }
-    ],
-    color: "#309fff"
+    ]
   }),
   methods: {
     handleResize: function() {
@@ -64,7 +74,7 @@ export default {
     dense() {
       return this.width < 576;
     },
-    toggleSubtitle() {
+    toggleYear() {
       return this.width < 576;
     },
     isMargin() {
@@ -83,7 +93,7 @@ export default {
 <style scoped lang="scss">
 .history-wrapper {
   @include section;
-  background-color: #ebf0f4;
+  background-color: $main-gray;
   @include sp {
     padding-left: 0;
   }

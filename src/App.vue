@@ -4,7 +4,7 @@
     <v-content>
       <AboutMe />
       <History />
-      <Skill />
+      <Skills />
       <Links />
     </v-content>
   </v-app>
@@ -14,7 +14,7 @@
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import History from "./components/History";
-import Skill from "./components/Skill";
+import Skills from "./components/Skills";
 import Links from "./components/Links";
 
 export default {
@@ -24,7 +24,7 @@ export default {
     Header,
     AboutMe,
     History,
-    Skill,
+    Skills,
     Links
   },
 

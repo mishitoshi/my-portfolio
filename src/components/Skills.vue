@@ -4,10 +4,14 @@
     <div class="skill" v-for="(skill, i) in skills" :key="i">
       <SubTitle :sub-title="skill.subtitle" />
       <div class="skill-items">
-        <span v-for="(content, i) in skill.content" :key="i" class="item">
-          #{{ content }}
+        <span
+          v-for="(item, i) in skill.items"
+          :key="i"
+          class="item elevation-3"
+        >
+          {{ item }}
         </span>
-        <span class="item">etc...</span>
+        <span>etc...</span>
       </div>
     </div>
   </div>
@@ -18,36 +22,35 @@ import Title from "./Title";
 import SubTitle from "./SubTitle";
 
 export default {
-  name: "Skill",
+  name: "Skills",
   components: {
     Title,
     SubTitle
   },
   data: () => ({
     title: "Skills",
-    // TODO: とりあえず形だけ実装、要命名
     skills: [
       {
         subtitle: "実務経験あり",
-        content: [
+        items: [
           "HTML",
           "CSS",
           "Ruby",
           "RubyonRails",
-          "slim",
           "JavaScript",
           "jQuery",
           "GitHub",
           "GitHubFlow",
           "Slack",
           "MySQL",
+          "Redis",
           "GCP(StackDriber etc..)",
           "AWS(EC2, Route53)"
         ]
       },
       {
         subtitle: "実務経験なし",
-        content: [
+        items: [
           "CircleCI",
           "Docker",
           "Vue.js",
@@ -57,7 +60,7 @@ export default {
       },
       {
         subtitle: "興味がある",
-        content: ["Golang", "Nuxt.js"]
+        items: ["Go", "Nuxt.js"]
       }
     ]
   })
@@ -74,15 +77,24 @@ export default {
     @include sp {
       width: 90%;
     }
-    h3 {
-      padding: 10px 0;
-    }
     .skill-items {
       display: flex;
       flex-wrap: wrap;
       font-size: 16px;
-      .item {
+      margin-bottom: 12px;
+      span {
         padding: 8px;
+        margin: 8px;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+      .item {
+        color: $light-black;
+        background-color: $main-gray;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
       }
     }
   }
