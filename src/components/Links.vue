@@ -2,7 +2,7 @@
   <div class="link-wrapper" id="link">
     <Title :title="title" />
     <ul class="link-items">
-      <li v-for="(link, i) in links" :key="i" class="item">
+      <li v-for="(link, i) in links" :key="i" class="item elevation-5">
         <a :href="link.url"
           ><img :src="link.image_url" alt="" /><span>{{ link.name }}</span></a
         >
@@ -54,7 +54,7 @@ export default {
 <style scoped lang="scss">
 .link-wrapper {
   @include section;
-  background-color: #ebf0f4;
+  background-color: $main-gray;
 }
 .link-items {
   display: flex;
@@ -75,7 +75,6 @@ export default {
     width: 45%;
     margin: 8px 0;
     background-color: white;
-    box-shadow: 0 0 8px gray;
     @include sp {
       width: 100%;
     }

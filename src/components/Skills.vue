@@ -4,10 +4,10 @@
     <div class="skill" v-for="(skill, i) in skills" :key="i">
       <SubTitle :sub-title="skill.subtitle" />
       <div class="skill-items">
-        <span v-for="(content, i) in skill.content" :key="i" class="item">
-          #{{ content }}
+        <span v-for="(content, i) in skill.content" :key="i" class="item elevation-3">
+          {{ content }}
         </span>
-        <span class="item">etc...</span>
+        <span>etc...</span>
       </div>
     </div>
   </div>
@@ -75,14 +75,27 @@ export default {
       width: 90%;
     }
     h3 {
-      padding: 10px 0;
+      padding: 4px 8px;
+      border-left: 4px solid #6dd3f7;
+      margin-bottom: 8px;
     }
     .skill-items {
       display: flex;
       flex-wrap: wrap;
       font-size: 16px;
-      .item {
+      margin-bottom: 12px;
+      span {
         padding: 8px;
+        margin: 8px 0px;
+        &:not(:last-child) {
+          margin: 8px;
+        }
+      }
+      .item {
+        background-color: $main-gray;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
       }
     }
   }

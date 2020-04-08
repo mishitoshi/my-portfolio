@@ -12,7 +12,9 @@
           <span>{{ history.year }}</span>
         </template>
         <v-card raised>
-          <v-card-title class="headline">{{ history.title }}</v-card-title>
+          <v-card-title class="title font-weight-bold">{{
+            history.title
+          }}</v-card-title>
           <v-card-subtitle v-show="toggleSubtitle">{{
             history.year
           }}</v-card-subtitle>
@@ -49,7 +51,7 @@ export default {
       },
       {
         year: "2019/02",
-        title: "プログラミングを始める",
+        title: "プログラミングに出会う",
         text:
           "Amazon Primeでシリコンバレーというドラマを見てエンジニアに憧れ、プログラミングを始めました。" +
           "そこからプログラミングにはまり、総合職での就活をやめてエンジニアを目指すことにしました。"
@@ -59,7 +61,7 @@ export default {
         title: "株式会社Journey",
         text:
           "ミニッツ(https://minute.jp/)というサービスの新規機能開発、外部サービスとの連携、保守など幅広くの業務に携わっています。" +
-          "サーバーサイドはRuby, フロントエンドはVanillaJSやjQueryを書いています。"
+          "サーバーサイドはRuby, フロントエンドはJavaScriptやjQueryを書いています。"
       }
     ],
     color: "#309fff"
@@ -92,7 +94,7 @@ export default {
 <style scoped lang="scss">
 .history-wrapper {
   @include section;
-  background-color: #ebf0f4;
+  background-color: $main-gray;
   @include sp {
     padding-left: 0;
   }
