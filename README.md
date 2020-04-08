@@ -11,4 +11,4 @@ URL: https://mishitoshi.com/
 ## その他
 - Route53
 - CloudFront
-= ACM
+- ACM
