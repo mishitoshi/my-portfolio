@@ -1,7 +1,7 @@
 <template>
-  <section class="aboutme-wrapper" id="about-me">
+  <section class="aboutMe-wrapper" id="about-me">
     <Title :title="title" />
-    <div class="aboutme">
+    <div class="aboutMe">
       <v-avatar size="150">
         <img :src="profile.image.url" :alt="profile.image.alt" />
       </v-avatar>
@@ -38,10 +38,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.aboutme-wrapper {
+.aboutMe-wrapper {
   @include section;
 }
-.aboutme {
+.aboutMe {
   @include flex-column;
   width: 80%;
   @include sp {

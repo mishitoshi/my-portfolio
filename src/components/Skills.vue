@@ -4,8 +4,12 @@
     <div class="skill" v-for="(skill, i) in skills" :key="i">
       <SubTitle :sub-title="skill.subtitle" />
       <div class="skill-items">
-        <span v-for="(content, i) in skill.content" :key="i" class="item elevation-3">
-          {{ content }}
+        <span
+          v-for="(item, i) in skill.items"
+          :key="i"
+          class="item elevation-3"
+        >
+          {{ item }}
         </span>
         <span>etc...</span>
       </div>
@@ -25,11 +29,10 @@ export default {
   },
   data: () => ({
     title: "Skills",
-    // TODO: とりあえず形だけ実装、要命名
     skills: [
       {
         subtitle: "実務経験あり",
-        content: [
+        items: [
           "HTML",
           "CSS",
           "Ruby",
@@ -47,7 +50,7 @@ export default {
       },
       {
         subtitle: "実務経験なし",
-        content: [
+        items: [
           "CircleCI",
           "Docker",
           "Vue.js",
@@ -57,7 +60,7 @@ export default {
       },
       {
         subtitle: "興味がある",
-        content: ["Go", "Nuxt.js"]
+        items: ["Go", "Nuxt.js"]
       }
     ]
   })
@@ -74,11 +77,6 @@ export default {
     @include sp {
       width: 90%;
     }
-    h3 {
-      padding: 4px 8px;
-      border-left: 4px solid #6dd3f7;
-      margin-bottom: 8px;
-    }
     .skill-items {
       display: flex;
       flex-wrap: wrap;
@@ -86,12 +84,13 @@ export default {
       margin-bottom: 12px;
       span {
         padding: 8px;
-        margin: 8px 0px;
-        &:not(:last-child) {
-          margin: 8px;
+        margin: 8px;
+        &:last-child {
+          margin-left: 0;
         }
       }
       .item {
+        color: $light-black;
         background-color: $main-gray;
         border-radius: 8px;
         font-size: 0.9rem;

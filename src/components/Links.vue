@@ -61,8 +61,8 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 80%;
   padding: 0;
+  width: 80%;
 
   @include sp {
     width: 90%;
@@ -70,21 +70,21 @@ export default {
   }
   li.item {
     display: flex;
+    background-color: white;
     color: black;
-    padding: 8px 20px;
     width: 45%;
     margin: 8px 0;
-    background-color: white;
+    padding: 8px 20px;
     @include sp {
       width: 100%;
     }
     a {
       display: flex;
       align-items: center;
-      color: $black;
+      color: $light-black;
       font-size: 20px;
-      width: 100%;
       height: 100%;
+      width: 100%;
       img {
         width: 24px;
         height: auto;

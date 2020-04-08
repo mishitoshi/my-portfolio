@@ -1,9 +1,9 @@
 <template>
   <header>
     <v-navigation-drawer app v-model="drawer">
-      <v-list :two-line="twoLine">
-        <v-subheader v-html="subHeader"></v-subheader>
-        <v-list-item-group color="primary" v-model="item">
+      <v-list>
+        <v-subheader>{{ subHeader }}</v-subheader>
+        <v-list-item-group color="primary">
           <v-list-item v-for="(item, i) in items" :key="i" :href="item.id">
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -23,9 +23,7 @@ export default {
   name: "Header",
   data: () => ({
     drawer: null,
-    twoLine: true,
-    item: 4,
-    subHeader: "sitemap",
+    subHeader: "SiteMap",
     items: [
       {
         id: "#about-me",

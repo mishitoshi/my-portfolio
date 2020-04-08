@@ -5,7 +5,6 @@
       <v-timeline-item
         v-for="(history, i) in histories"
         :key="i"
-        small
         :color="color"
       >
         <template v-slot:opposite>
@@ -15,7 +14,7 @@
           <v-card-title class="title font-weight-bold">{{
             history.title
           }}</v-card-title>
-          <v-card-subtitle v-show="toggleSubtitle">{{
+          <v-card-subtitle v-show="toggleYear">{{
             history.year
           }}</v-card-subtitle>
           <v-card-text>{{ history.text }}</v-card-text>
@@ -36,6 +35,7 @@ export default {
   data: () => ({
     title: "History",
     width: window.innerWidth,
+    color: "#309fff",
     histories: [
       {
         year: "2016/04",
@@ -63,8 +63,7 @@ export default {
           "ミニッツ(https://minute.jp/)というサービスの新規機能開発、外部サービスとの連携、保守など幅広くの業務に携わっています。" +
           "サーバーサイドはRuby, フロントエンドはJavaScriptやjQueryを書いています。"
       }
-    ],
-    color: "#309fff"
+    ]
   }),
   methods: {
     handleResize: function() {
@@ -75,7 +74,7 @@ export default {
     dense() {
       return this.width < 576;
     },
-    toggleSubtitle() {
+    toggleYear() {
       return this.width < 576;
     },
     isMargin() {
