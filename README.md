@@ -1,6 +1,6 @@
 # mishitoshi's Portfolio
 
-URL: https://mishitoshi.com/
+URL: https://www.mishitoshi.com/
 
 ## 開発環境
 - @vue/cli 4.2.3
