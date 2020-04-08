@@ -1,24 +1,14 @@
-# my-portfolio
+# mishitoshi's Portfolio
 
-## Project setup
-```
-yarn install
-```
+URL: https://mishitoshi.com/
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 開発環境
+- @vue/cli 4.2.3
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## ホスティング先
+- Netlify
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## その他
+- Route53
+- CloudFront
+- ACM

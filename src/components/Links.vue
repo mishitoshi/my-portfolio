@@ -3,7 +3,7 @@
     <Title :title="title" />
     <ul class="link-items">
       <li v-for="(link, i) in links" :key="i" class="item elevation-5">
-        <a :href="link.url"
+        <a :href="link.url" target="_blank"
           ><img :src="link.image_url" alt="" /><span>{{ link.name }}</span></a
         >
       </li>
@@ -62,10 +62,10 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0;
-  width: 80%;
+  width: 70%;
 
   @include sp {
-    width: 90%;
+    width: 100%;
     @include flex-column;
   }
   li.item {
