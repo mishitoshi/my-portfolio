@@ -100,6 +100,9 @@ export default {
 }
 
 .history {
-  width: 100%;
+  width: 70%;
+  @include sp {
+    width: 100%;
+  }
 }
 </style>

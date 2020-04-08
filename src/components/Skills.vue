@@ -73,9 +73,9 @@ export default {
   .skill {
     @include flex-column;
     align-items: start;
-    width: 80%;
+    width: 70%;
     @include sp {
-      width: 90%;
+      width: 100%;
     }
     .skill-items {
       display: flex;
