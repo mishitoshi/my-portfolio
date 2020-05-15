@@ -7,8 +7,9 @@
       </v-avatar>
       <h2>{{ profile.name }}</h2>
       <div>
-        <p>{{ profile.text }}</p>
-        <p>{{ profile.hobby }}</p>
+        <p v-for="(text, i) in profile.texts" :key="i" class="profile-text">
+          {{ text }}
+        </p>
       </div>
     </div>
   </section>
@@ -29,9 +30,10 @@ export default {
         alt: "プロフィール画像"
       },
       name: "利光 正太(23)",
-      text:
-        "はじめまして！利光正太です。明治大学商学部4年生で現在休学中です。2019年2月にプログラミングに出会い、2019年9月から株式会社Journeyでwebエンジニアをしています。Rubyが得意です。",
-      hobby: "趣味：DAZNでサッカー観戦(プレミア・リーガ)・旅行・料理"
+      texts: [
+        "はじめまして！利光正太です。21卒の明治大学商学部4年生です。22019年2月にプログラミングに出会い、2019年9月から株式会社Journeyでwebエンジニアをしています。Rubyが得意です。",
+        "趣味：DAZNでサッカー観戦(プレミア・リーガ)・旅行・料理"
+      ]
     }
   })
 };
@@ -54,5 +56,8 @@ export default {
     font-size: 0.95rem;
     color: $light-black;
   }
+}
+.profile-text {
+  text-align: left;
 }
 </style>
