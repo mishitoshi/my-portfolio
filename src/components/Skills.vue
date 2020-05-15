@@ -36,14 +36,13 @@ export default {
           "HTML",
           "CSS",
           "Ruby",
-          "RubyonRails",
+          "Ruby on Rails",
           "JavaScript",
           "jQuery",
           "GitHub",
           "GitHubFlow",
           "Slack",
           "MySQL",
-          "Redis",
           "GCP(StackDriber etc..)",
           "AWS(EC2, Route53)"
         ]
@@ -60,7 +59,7 @@ export default {
       },
       {
         subtitle: "興味がある",
-        items: ["Go", "Nuxt.js"]
+        items: ["Go", "Nuxt.js", "クリーンアーキテクチャ", "DDD"]
       }
     ]
   })
